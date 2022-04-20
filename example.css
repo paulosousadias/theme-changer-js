@@ -124,6 +124,7 @@ pre.license {
   overflow-x: auto;
   word-wrap: break-word;
   white-space: pre-line;
+  padding: 1.0rem;
 }
 
 @media screen and (min-width: 640px) {
