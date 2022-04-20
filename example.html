@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Theme Changer JS</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <link rel='stylesheet' type='text/css' media='screen' href='example.css'>
+
+  <link rel="stylesheet" href="theme-changer.css" />
+</head>
+
+<body>
+  <div>
+    <div class="theme-toggle"></div>
+    <script type="text/javascript" src="theme-changer.js"></script>
+  </div>
+
+  <h1>Theme Changer JS</h1>
+  <p>
+    This is a simple theme changer JS package to allow changing theme to and from
+    dark mode.
+  </p>
+
+  <section>
+    <div><strong>Elements:</strong></div>
+    <p>
+      This package is composed of 4 files:
+    <ul>
+      <li><a href="theme-changer.js">theme-changer.js</a></li>
+      <li><a href="theme-changer.css">theme-changer.css</a></li>
+      <li><a href="light-icon.svg">light-icon.svg</a></li>
+      <li><a href="dark-icon.svg">dark-icon.svg</a></li>
+    </ul>
+    </p>
+  </section>
+
+  <section>
+    <div><strong>Usage:</strong></div>
+    <p>
+      To use this package add to the header of your page the following line:
+    </p>
+    <pre class="prettyprint">
+      <code class="language-html">
+        &lt;link rel="stylesheet" href="_html/theme-changer.css" /&gt;
+
+      </code>
+    </pre>
+    <p>
+      Or on the css:
+    </p>
+    <pre class="prettyprint">
+      <code class="language-css">
+        @import url('theme-changer.css');
+
+      </code>
+    </pre>
+
+    <p>
+      On the html place the following lines where you want it the
+      theme changer to appear:
+    </p>
+    <pre class="prettyprint">
+      <code class="language-css">
+        &lt;div class="theme-toggle"&gt;&lt;/div&gt;
+        &lt;script src="_html/theme-changer.js"&gt;&lt;/script&gt;
+
+      </code>
+    </pre>
+    
+    <p>
+      On the page's css you must define the following variables
+      (check <a href="example.css">example.css</a> and
+      <a href="example.html">example.html</a> for full example):
+      <pre class="prettyprint">
+        <code class="language-css">
+          :root {
+            /*example css*/
+            --background-color: #f6f6f6;
+            --background-color-section: #ccc4;
+            --font-color: #222;
+            
+            /*theme-changer vars*/
+            --tc-foreground-color: var(--font-color);
+            --tc-background-color: var(--background-color);
+            --tc-on-background-color: var(--background-color-section);
+          }
+          
+        </code>
+      </p>
+    </pre>
+  </section>
+
+</body>
+<footer>
+  <p class="copy">&copy; 2022 Paulo Dias</p>
+</footer>
+
+</html>

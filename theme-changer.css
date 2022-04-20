@@ -1,0 +1,88 @@
+/*
+ Needs definition of root css vars:
+  > --font-color
+  > --background-color
+  > --background-color-section
+
+  > --tc-foreground-color
+  > --tc-background-color
+  > --tc-on-background-color
+
+*/
+.theme-toggle-switch {
+  display: block;
+}
+#theme-toggle-input {
+  display: none;
+}
+.theme-toggle-switch__control {
+  width: 50px;
+  height: 24px;
+  border-radius: 7px;
+  position: relative;
+  /* background: #999; */
+  background: var(--tc-foreground-color);
+  cursor: pointer;
+  margin: 5px auto;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  background-image: url("light-icon.svg");
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  background-position: 25px;
+}
+@media (hover: hover) {
+  .theme-toggle-switch__control:hover {
+    background: var(--tc-on-background-color);
+    background-image: url("light-icon.svg");
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+    background-position: 25px;
+  }
+}
+#theme-toggle-input:checked + .theme-toggle-switch__control {
+  background-image: url("dark-icon.svg");
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.theme-toggle-switch__control::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  background: var(--tc-background-color);
+  transition: left 0.25s;
+}
+#theme-toggle-input:checked + .theme-toggle-switch__control::after {
+  left: 28px;
+}
+.theme-toggle {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  margin: 5px auto;
+  top: 0px;
+  right: 2px;
+}
+.theme-toggle img {
+  width: 20px;
+  display: none;
+  margin-right: 10px;
+  outline: none;
+}
+.theme-toggle img.active {
+  display: block;
+}
+.theme-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    border-radius: 50%;
+}

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+:root {
+  --background-color: #f6f6f6;
+  --background-color-section: #ccc4;
+  --background-color-button-action: #0c0000;
+  --font-color: #222;
+  --font-color-header: #474747;
+  --link-color: #3f8ef5;
+
+  /*theme-changer vars*/
+  --tc-foreground-color: var(--font-color);
+  --tc-background-color: var(--background-color);
+  --tc-on-background-color: var(--background-color-section);
+}
+
+:root.dark {
+  --background-color: #121212;
+  --background-color-section: #ccc4;
+  --background-color-button-action: #fcffff;
+  --font-color: #f6f6f6;
+  --font-color-header: #c0c0c0;
+  --link-color: #809fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.light {
+    --background-color: #f6f6f6;
+    --background-color-section: #ccc4;
+    --background-color-button-action: #0c0000;
+    --font-color: #222;
+    --font-color-header: #474747;
+    --link-color: #3f8ef5;
+  }
+
+  :root {
+    --background-color: #121212;
+    --background-color-section: #ccc4 --background-color-button-action: #fcffff;
+    --font-color: #f6f6f6;
+    --font-color-header: #c0c0c0;
+    --link-color: #809fff;
+  }
+}
+
+body {
+  font-family: 'Noto Sans', Tahoma, Arial, Helvetica, sans-serif;
+  column-count: 1;
+  padding: 1em;
+  width: 285px;
+  margin: auto;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  border-radius: 2em;
+}
+
+.copy {
+  align-content: center;
+  font-size: small;
+  text-align: center;
+}
+
+section {
+  background-color: var(--background-color-section);
+  border-radius: 2em;
+  padding: 1em;
+  margin: 1em 0em;
+}
+
+div.panel {
+  float: left;
+  width: auto;
+}
+
+table {
+  margin: 12px 12px 12px 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Titillium Web', "Trebuchet MS", "Trebuchet", "Nimbus Sans L", sans-serif;
+  color: var(--font-color-header);
+  margin: 1em 0 .3em;
+}
+
+p {
+  margin: 1em 0 .3em;
+}
+
+a {
+  color: var(--link-color);
+}
+
+code {
+  color: var(--font-color);
+  background: #ccc;/*var(--background-color);*/
+  font-size: inherit;
+  word-wrap: break-word;
+  box-decoration-break: clone;
+  padding: 0.1rem 0.3rem 0.2rem;
+  border-radius: 0.2rem;
+}
+
+pre code {
+  display: block;
+  white-space: pre-line;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 100px;
+  padding: 0.3rem;
+  border: none;
+}
+
+pre.prettyprint {
+  border: none;
+}
+
+@media screen and (min-width: 640px) {
+  div.panel {
+    width: auto;
+    width: 46%;
+    margin: 0 2% 0 2%;
+  }
+}
+
+@media(min-width: 320px) {
+  body {
+    width: 95%;
+  }
+}
+
+@media(min-width: 400px) {}
+
+@media(min-width: 768px) {
+  body {
+    width: 760px;
+  }
+}
